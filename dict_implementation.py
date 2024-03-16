@@ -108,28 +108,11 @@ class MyDict:
         return self.__get_valid_items()
 
 
-d = MyDict()
-d["Alice"] = "random"
-d["Hhih"] = "aaaa"
-print("Alice" in d)
-for i in range(20):
-    d[i] = 'some_' + str(i)
-
-print(d.keys())
-print(d.values())
-print(d.items())
-
-
-for key in d:
-    print(key)
-
-for i in range(20):
-    del d[i]
-
-print(d)
-
-del d["Alice"]
-del d["Alice"]
-print(d["Alice"])
-print(d)
-print("Alice" in d)
+my_dict = MyDict()
+my_dict['name'] = 'Alice'
+my_dict['age'] = 30
+print(my_dict['name'])  # Вернет 'Alice'
+print('city' in my_dict)  # Вернет False
+del my_dict['age']
+print(my_dict.keys())  # Вернет ['name']
+print(my_dict.values())  # Вернет ['Alice']
